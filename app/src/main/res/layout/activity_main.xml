@@ -9,20 +9,56 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv_displayedText"
+        android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="..."
+        android:text="Name"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Age"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Gender"
+        android:textColor="@android:color/black"
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/et_editText"
+        android:id="@+id/et_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:ems="10"
-        android:hint="Type something in here" />
+        android:hint="Name" />
+
+    <EditText
+        android:id="@+id/et_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="number" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:layout_margin="10dp"
+        android:id="@+id/switch_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Female/Male"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btn_save"
@@ -30,7 +66,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="#FF7043"
-        android:text="Save text"
+        android:padding="10dp"
+        android:text="Save user"
         android:textColor="@android:color/white" />
 
 
