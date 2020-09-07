@@ -1,6 +1,7 @@
 package com.federicocotogno.datastoretest
 
 import android.content.Context
+import android.widget.Toast
 import androidx.datastore.preferences.createDataStore
 import androidx.datastore.preferences.edit
 import androidx.datastore.preferences.preferencesKey
@@ -30,7 +31,12 @@ class UserManager(context: Context) {
 
     //Create an age flow
     val userAgeFlow: Flow<Int> = dataStore.data.map {
-        it[USER_AGE_KEY] ?: 0
+        val age = it[USER_AGE_KEY] ?: 0
+
+        if (age < 18) {
+            Toast.makeText(context, "The user is under 18", Toast.LENGTH_SHORT).show()
+        }
+        age
     }
 
     //Create a name flow
