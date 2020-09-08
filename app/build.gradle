@@ -48,9 +48,8 @@ dependencies {
     // Preferences DataStore
     implementation "androidx.datastore:datastore-preferences:1.0.0-alpha01"
 
-    // Proto DataStore
+    // Proto DataStore // Not used in this tutorial
     implementation  "androidx.datastore:datastore-core:1.0.0-alpha01"
-
 
     // Lifecycle components
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
