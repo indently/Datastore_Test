@@ -9,8 +9,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-private const val TAG = "MainActivity"
-
 class MainActivity : AppCompatActivity() {
 
     lateinit var userManager: UserManager
@@ -35,25 +33,19 @@ class MainActivity : AppCompatActivity() {
 
         //Updates age
         userManager.userAgeFlow.asLiveData().observe(this, {
-            Log.d(TAG, "Age: $it")
             age = it
-
             tv_age.text = it.toString()
         })
 
         //Updates name
         userManager.userNameFlow.asLiveData().observe(this, {
-            Log.d(TAG, "Name: $it")
             name = it
-
             tv_name.text = it.toString()
         })
 
         //Updates gender
         userManager.userGenderFlow.asLiveData().observe(this, {
             gender = if (it) "Male" else "Female"
-            Log.d(TAG, "Gender: $gender")
-
             tv_gender.text = gender
         })
     }
